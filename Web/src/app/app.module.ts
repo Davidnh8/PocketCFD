@@ -8,7 +8,7 @@ import { NavierStokesCavityComponent } from './navier-stokes-cavity/navier-stoke
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NoCacheHeadersInterceptorService } from 'src/app/no-cache-headers-interceptor.service';
-
+import { FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -19,7 +19,9 @@ import { NoCacheHeadersInterceptorService } from 'src/app/no-cache-headers-inter
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
             {

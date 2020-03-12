@@ -11,8 +11,17 @@ export class NavierStokesService {
   ) { }
 
   public Cavity(
+    parameters
   ){
-    return this.http.get("http://127.0.0.1:5002/navierstokes", {responseType: "blob"})
+    let xlength = parameters.controls['xlength'].value
+    let ylength = parameters.controls['ylength'].value
+    let nx = parameters.controls['nx'].value
+    let nu = parameters.controls['nu'].value
+    let rho = parameters.controls['rho'].value
+    let dt = parameters.controls['dt'].value
+    let iteration = parameters.controls['iteration'].value
+    console.log(xlength)
+    return this.http.get("http://127.0.0.1:5002/navierstokes?xlength="+xlength+"&ylength="+ylength+"&nx="+nx+"&nu="+nu+"&rho="+rho+"&dt="+dt+"&iteration="+iteration, {responseType: "blob"})
     
   }
 }

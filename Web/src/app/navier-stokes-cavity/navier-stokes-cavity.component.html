@@ -6,43 +6,61 @@
     <img [src]="cavity">
 </div>
 
+<form [formGroup]="parameterForm"
+    (ngSubmit)="onSubmit(parameterForm)">
+    <div>
+        <label for="xlength">
+            x length
+        </label>
+        <input id="xlength" type="text" formControlName="xlength">
+    </div>
+    
+    <div>
+        <label for="ylength">
+            y length
+        </label>
+        <input id="ylength" type="text" formControlName="ylength">
+    </div>
+    
+    <div>
+        <label for="nx">
+            nx (ny)
+        </label>
+        <input id="nx" type="text" formControlName="nx">
+    </div>
+    
+    <div>
+        <label for="nu">
+            nu (viscosity)
+        </label>
+        <input id="nu" type="text" formControlName="nu">
+    </div>
+    
+    <div>
+        <label for="rho">
+            rho (density)
+        </label>
+        <input id="rho" type="text" formControlName="rho">
+    </div>
+    
+    <div>
+        <label for="dt">
+            dt (time increment)
+        </label>
+        <input id="dt" type="text" formControlName="dt">
+    </div>
+    
+    <div>
+        <label for="iteration">
+            Iteration
+        </label>
+        <input id="iteration" type="text" formControlName="iteration">
+    </div>
 
-<div>
-    <label for="nx">
-        nx (ny)
-    </label>
-    <input id="name" type="text" formControlName="nx">
-</div>
+    <button mat-button type="submit"> Submit</button>
 
-<div>
-    <label for="nu">
-        nu (viscosity)
-    </label>
-    <input id="name" type="text" formControlName="nu">
-</div>
-
-<div>
-    <label for="rho">
-        rho (density)
-    </label>
-    <input id="name" type="text" formControlName="rho">
-</div>
-
-<div>
-    <label for="dt">
-        dt (time increment)
-    </label>
-    <input id="name" type="text" formControlName="dt">
-</div>
-
-<div>
-    <label for="Iteration">
-        Iteration
-    </label>
-    <input id="name" type="text" formControlName="Iteration">
-</div>
+</form>
 
 
-<div class="center">
-    <button mat-button (click)="getCavity()"> Click me!</button>
-</div>
+
+
