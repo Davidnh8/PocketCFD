@@ -1,0 +1,48 @@
+<p>Navier Stokes Cavity</p>
+
+
+
+<div class="center">
+    <img [src]="cavity">
+</div>
+
+
+<div>
+    <label for="nx">
+        nx (ny)
+    </label>
+    <input id="name" type="text" formControlName="nx">
+</div>
+
+<div>
+    <label for="nu">
+        nu (viscosity)
+    </label>
+    <input id="name" type="text" formControlName="nu">
+</div>
+
+<div>
+    <label for="rho">
+        rho (density)
+    </label>
+    <input id="name" type="text" formControlName="rho">
+</div>
+
+<div>
+    <label for="dt">
+        dt (time increment)
+    </label>
+    <input id="name" type="text" formControlName="dt">
+</div>
+
+<div>
+    <label for="Iteration">
+        Iteration
+    </label>
+    <input id="name" type="text" formControlName="Iteration">
+</div>
+
+
+<div class="center">
+    <button mat-button (click)="getCavity()"> Click me!</button>
+</div>
